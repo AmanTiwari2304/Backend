@@ -59,7 +59,7 @@ class Student extends Person {
     }
 }
 
-class Teacher extends Person {
+class Teacher extends  Person {
     constructor (name, age, subject) {
         super(name,age);
         this.subject = subject;
