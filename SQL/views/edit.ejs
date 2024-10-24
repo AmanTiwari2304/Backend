@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Username</title>
+    <style>
+        table,th,td{
+            border: 2px,solid,black;
+        }
+    </style>
+</head>
+<body>
+    <h2>You are about to edit : <%= user.email %></h2>
+    <table>
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= user.id %></td>
+               <td><%= user.username %></td>
+               <td><%= user.email %></td>
+            </tr>
+        </tbody>
+    </table>
+        <form action="/user/<%= user.id %>?_method=PATCH" method="post">
+        <textarea name="username" id=""><%= user.username %></textarea>
+        <input type="password" name="password" placeholder="Enter password">    
+        <button>Submit</button>
+        </form>
+    
+</body>
+</html>
